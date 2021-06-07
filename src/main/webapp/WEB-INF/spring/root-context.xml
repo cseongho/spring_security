@@ -6,6 +6,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
+	<bean id="passwordEncoder" class="net.developia.sec.web.MyPasswordEncoder" />
+	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean 
       id="dataSource"
@@ -23,4 +25,5 @@
       <property name="dataSource" ref="dataSource" />
    </bean>
 	
+	<!-- 반드시 transactionManager와 함께 사용해야한다. -->
 </beans>
