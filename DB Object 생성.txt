@@ -1,0 +1,25 @@
+--db object 생성 및 레코드 입력 --
+
+-- users : 유저 이름, 암호
+create table users(
+username varchar2(60) primary key,
+password varchar2(128) not null,
+enabled char(10) not null
+);
+
+-- authorities : 유저 이름, 유저 권한
+create table authorities (
+username varchar2(60) not null,
+authority varchar2(60) not null
+);
+
+create unique index ix_auth_username on authorities(username, authority);
+insert into users values('next','1111','t');
+insert into users values('admin','1111','t');
+insert into authorities values('admin','ROLE_USER');
+insert into authorities values('admin','ROLE__MANAGER');
+insert into authorities values('next','ROLE_USER');
+
+commit;
+select * from users;
+select * from authorities;
