@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
+@RequestMapping("/ex1")
 public class SecurityTestController {
    @RequestMapping("/")
    public String root() {
@@ -18,7 +19,6 @@ public class SecurityTestController {
    @RequestMapping("/index")
    public String index() {
 	   
-	   /*
       log.info("-----------------------------------------------");
       Authentication auth = SecurityContextHolder.getContext().getAuthentication();
       log.info("user name       : " + auth.getName());
@@ -27,7 +27,8 @@ public class SecurityTestController {
       log.info("detail          : " + auth.getDetails().toString());
       log.info("isAuthenticated : " + auth.isAuthenticated());
       log.info("user role       : " + auth.getAuthorities().toString());
-      log.info("-----------------------------------------------"); */
+      log.info("-----------------------------------------------");
+      
       return "sec_view/index";
    }
    
