@@ -23,6 +23,15 @@
 	
 	<context:component-scan base-package="net.developia.sec" />
 	
-	
+	<!-- 
+	<default-servlet-handler />
+
+   <view-controller path="/" view-name="redirect:index" />
+   <view-controller path="/index" view-name="sec_view/index" />
+   <view-controller path="/home/main" view-name="sec_view/homeMain" />
+   <view-controller path="/manager/main" view-name="sec_view/managerMain" />
+   <view-controller path="/admin/main" view-name="sec_view/adminMain" />
+   <view-controller path="/member/main" view-name="sec_view/memberMain" />
+	 -->
 	
 </beans:beans>
